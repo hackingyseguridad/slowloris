@@ -1,4 +1,6 @@
-# slowloris
+# slowloris 
+
+Ataque Slowloris de denegacion de servicio con peticiones web 
 
 #!/bin/bash
 # Slowloris test de stress
