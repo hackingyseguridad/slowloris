@@ -252,3 +252,7 @@ LoadModule status_module modules/mod_status.so
 | 4. Mitigación | Aplicar `mod_reqtimeout` / `limit_conn` y repetir la fase 2 | Comparar nº de workers agotados antes/después |
 | 5. Validación | Confirmar que un cliente legítimo sigue siendo atendido con la mitigación activa | Latencia y disponibilidad para tráfico normal |
 
+
+#
+http://www.hackingyseguridad.com/
+#
