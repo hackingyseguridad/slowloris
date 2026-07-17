@@ -4,13 +4,9 @@ Ataque Slowloris de denegacion de servicio con peticiones web
 
 # Slowloris: entendimiento, detección y mitigación
 
-Este documento explica **cómo funciona conceptualmente el ataque Slowloris**, cómo **detectarlo** y cómo **mitigarlo** en servidores web reales (Apache, Nginx, y mediante WAF/balanceadores). Incluye también una guía para montar un **laboratorio controlado y aislado** en el que practicar la detección y defensa de forma segura y legal.
-
-> ⚠️ Este README tiene un enfoque **defensivo**. No incluye scripts de ataque, parámetros de explotación ni instrucciones operativas para lanzar Slowloris contra un objetivo. El laboratorio descrito está pensado para ejecutarse íntegramente en máquinas propias, aisladas de redes de producción o de terceros.
-
 ---
 
-## 1. ¿Qué es Slowloris?
+### Slowloris
 
 Slowloris es un ataque de **denegación de servicio (DoS)** de capa de aplicación (capa 7), descrito públicamente por primera vez por Robert "RSnake" Hansen en 2009. A diferencia de un DoS volumétrico (que satura el ancho de banda con tráfico masivo), Slowloris es un ataque de **bajo ancho de banda** que explota cómo algunos servidores web gestionan las conexiones HTTP concurrentes.
 
@@ -256,21 +252,3 @@ LoadModule status_module modules/mod_status.so
 | 4. Mitigación | Aplicar `mod_reqtimeout` / `limit_conn` y repetir la fase 2 | Comparar nº de workers agotados antes/después |
 | 5. Validación | Confirmar que un cliente legítimo sigue siendo atendido con la mitigación activa | Latencia y disponibilidad para tráfico normal |
 
-### 4.5 Buenas prácticas legales y éticas
-
-- Realiza estas pruebas **únicamente** en máquinas y redes de tu propiedad o sobre las que tengas autorización explícita y por escrito.
-- Nunca apuntes ninguna herramienta de este tipo de prueba contra dominios, IPs o infraestructuras que no controles, aunque sean de "prueba" o de terceros que digan estar de acuerdo verbalmente.
-- Documenta el alcance y la autorización de cada práctica (alcance, fechas, responsable) como harías en un pentest real.
-
----
-
-## 5. Referencias
-
-- OWASP – Denial of Service Cheat Sheet
-- Apache HTTP Server – documentación de `mod_reqtimeout` y `mod_qos`
-- Nginx – documentación oficial de `limit_conn` y timeouts
-- HAProxy – documentación de timeouts de conexión
-
----
-
-*Documento con enfoque defensivo. No sustituye una evaluación de seguridad profesional; para entornos de producción, valida cualquier cambio de configuración en un entorno de pre-producción antes de desplegarlo.*
