@@ -1,8 +1,8 @@
-# slowloris 
+### slowloris 
 
 Ataque Slowloris de denegacion de servicio con peticiones web 
 
-# Slowloris: entendimiento, detección y mitigación
+### Slowloris: entendimiento, detección y mitigación
 
 ---
 
