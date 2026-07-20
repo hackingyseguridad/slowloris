@@ -46,7 +46,7 @@ El resultado: todos los workers del servidor quedan **ocupados esperando indefin
 
 ---
 
-## 2. Detección
+### 2. Detección
 
 ### 2.1 Indicadores (IOCs) típicos
 
@@ -74,7 +74,7 @@ netstat -an | grep ':80' | grep ESTABLISHED | wc -l
 
 ---
 
-## 3. Mitigación
+### 3. Mitigación
 
 ### 3.1 Apache HTTPD
 
